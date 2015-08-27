@@ -1,7 +1,7 @@
 FROM java:7
 
-COPY HelloWorld.java /
+COPY src /home/root/javahelloworld/src
 
-RUN javac HelloWorld.java
+RUN javac -d /home/root/javahelloworld/bin /home/root/javahelloworld/src/HelloWorld.java
 
-ENTRYPOINT ["java", "HelloWorld"]
+ENTRYPOINT ["java", "-cp", "/home/root/javahelloworld/bin", "HelloWorld"]
