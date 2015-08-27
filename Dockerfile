@@ -5,4 +5,4 @@ RUN apt-get update && apt-get install -y \
     vim \
     openjdk-7-jdk
 
-CMD ["ping", "127.0.0.1", "-c", "30"]
+ENTRYPOINT ["ping"]
